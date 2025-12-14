@@ -1,0 +1,40 @@
+1️⃣  Create a Ruby Program
+    a. Create a Ruby file : 
+          nano hello.rb
+       Add this code:
+          puts "Hello, World!"
+
+2️⃣  Run the Ruby Program
+    Method 1: Run using the ruby command (recommended)
+      $ ruby hello.rb
+    Output:
+        Hello, World!
+
+3️⃣  Run Ruby Program as an Executable (Optional)
+    Step 1: Add shebang line
+    Edit the file:
+        nano hello.rb
+    Add this at the top:
+
+        #!/usr/bin/env ruby
+        puts "Hello, World!"
+
+    Step 2: Make the file executable
+        $ chmod +x hello.rb
+
+    Step 3: Run it directly
+        $ ./hello.rb
+
+4️⃣  Run Ruby Code from Command Line (One-Liner)
+    You can run Ruby without a file:
+        $ ruby -e 'puts "Hello from Ruby!"'
+
+5️⃣  Run Ruby with Input
+    Example program (input.rb):
+
+        print "Enter your name: "
+        name = gets.chomp
+        puts "Hello, #{name}!"
+
+    Run it:
+        $ ruby input.rb

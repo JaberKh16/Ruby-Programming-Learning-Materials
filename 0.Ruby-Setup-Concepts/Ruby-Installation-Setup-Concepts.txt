@@ -1,0 +1,111 @@
+Ruby Installation and Update Guide on Linux
+============================================
+Step 1: Install Ruby on Linux
+
+Method 1: Using Package Manager (apt, yum, dnf)
+-----------------------------------------------
+Update System Packages:
+Before installing, it's always good to update your system:
+
+$ sudo apt update  # For Debian/Ubuntu
+$ sudo yum update  # For CentOS/RHEL
+$ sudo dnf update  # For Fedora
+
+
+Install Ruby:
+
+a. For Debian/Ubuntu based systems:
+     $ sudo apt install ruby-full
+b. For CentOS/RHEL based systems:
+     $ sudo yum install ruby
+c. For Fedora:
+     $ sudo dnf install ruby
+
+Verify Installation: 
+Once Ruby is installed, verify it by checking the version:
+  $ ruby -v
+
+This should print the installed Ruby version.
+
+Method 2: Using RVM (Ruby Version Manager)
+------------------------------------------
+RVM allows you to install and manage multiple versions of Ruby on the same system. It's a very flexible tool if you plan to work with different Ruby versions for different projects.
+a. Install RVM:
+   First, install the required dependencies:
+     $ sudo apt install curl gpg
+   Now, install RVM:
+     $ \curl -sSL https://get.rvm.io | bash -s stable
+
+b. Install Ruby via RVM:
+   After RVM is installed, restart your terminal or run:
+     $ source ~/.rvm/scripts/rvm
+   To install Ruby (for example, version 3.1.0):
+     $ rvm install 3.1.0
+
+c. Set Default Ruby Version:
+   To set the installed Ruby version as default:
+    $ rvm use 3.1.0 --default
+
+d. Verify Ruby Installation via RVM:
+   To check the Ruby version installed via RVM:
+    $ ruby -v
+
+
+Step 2: Update Ruby Verison
+---------------------------
+Method 1: Using Package Manager
+
+If you installed Ruby via your package manager (apt, yum, or dnf), you can update Ruby using the same method:
+
+a. For Debian/Ubuntu:
+  $ sudo apt update
+  $ sudo apt upgrade ruby-full
+
+
+b. For CentOS/RHEL:
+  $ sudo yum update ruby
+
+
+c. For Fedora:
+  $ sudo dnf update ruby
+
+
+After updating, verify that Ruby was successfully updated by checking the version:
+  $ ruby -v
+
+
+Method 2: Using RVM (Ruby Version Manager)
+------------------------------------------
+
+If you used RVM to install Ruby, updating Ruby is easy:
+a. Update RVM:
+  $ rvm get stable
+
+
+b. Install Latest Ruby Version:
+Install the latest Ruby version (for example, 3.1.2):
+  $ rvm install 3.1.2
+
+
+c. Set the New Ruby Version as Default:
+  $ rvm use 3.1.2 --default
+
+
+d. Verify Ruby Version:
+  $ ruby -v
+
+
+Step 3: Optional: Install Bundler
+----------------------------------
+a. After installing or updating Ruby, you might also want to install Bundler, which helps manage Ruby gems:
+  $ gem install bundler
+
+b. Troubleshooting
+Ruby Not Found in PATH: If Ruby is not found after installation, make sure it's added to your system's PATH.
+For RVM-installed Ruby, run:
+  $ source ~/.rvm/scripts/rvm
+
+
+c. Permission Issues with Gem Installations: If you run into permission issues while installing gems, use the following:
+  $ sudo gem install gem_name
+
