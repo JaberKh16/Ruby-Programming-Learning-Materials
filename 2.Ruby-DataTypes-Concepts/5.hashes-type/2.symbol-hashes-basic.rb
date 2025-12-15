@@ -1,5 +1,7 @@
 # symbol keys in hash
-symbol_hash = { name: "Alice", age: 25 }
+# syntaxes: { symbol: value, :symbol => value }
+# symbols are immutable and unique, making them more memory efficient than strings for hash keys
+symbol_hash = { name: "Alice", age: 25, :profession: "Designer" }
 puts symbol_hash # print the symbol key hash
 
 

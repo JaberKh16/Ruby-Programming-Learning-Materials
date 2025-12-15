@@ -4,9 +4,12 @@ puts person # print the hash
 
 
 # accessing hash values
+# accessing via or fetch method
+# difference between [] and fetch is that fetch raises KeyError if key not found
+# alternatively, fetch can take a second argument as default value which will be returned if key not found
 puts person["name"] # access value for key "name"
-
-
+puts person.fetch("age") # access value for key "age" using fetch method
+puts person.fetch("country", "USA") # access non-existent key with default value
 
 # adding new key-value pair
 person["profession"] = "Developer"
