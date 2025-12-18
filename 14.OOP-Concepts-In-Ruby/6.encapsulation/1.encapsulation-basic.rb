@@ -59,4 +59,8 @@ account.withdraw(withdrawn_amount)
 account.display_balance
 
 # trying to access private method (will raise an error)
-# account.calculate_interest(5)  # Uncommenting this line will raise an error
+begin
+    account.calculate_interest(5)  # Uncommenting this line will raise an error
+rescue Exception => e 
+    puts "Error Occuered: #{e.message} ${e.class}"
+end
