@@ -1,0 +1,62 @@
+=begin
+Ruby Linking (File Linking / Requiring)
+
+In Ruby, linking refers to connecting multiple files together so that
+classes, modules, and methods defined in one file can be used in another.
+
+Common ways to link files:
+1. require
+   - Loads the file only once
+   - Used for gems and standard libraries
+
+   Example:
+     require 'json'
+
+2. require_relative
+   - Loads a file relative to the current file
+   - Most commonly used in raw Ruby projects
+
+   Example:
+     require_relative '../lib/user'
+
+3. load
+   - Loads the file every time it is called
+   - Rarely used in production
+
+   Example:
+     load 'config.rb'
+
+Best Practice:
+- Use require_relative for project files
+- Use require for gems and Ruby standard libraries
+=end
+
+
+=begin
+Rubocop (Ruby Code Linter & Formatter)
+
+RuboCop is a static code analyzer and formatter for Ruby.
+It enforces Ruby style guidelines and helps maintain clean,
+consistent, and readable code.
+
+Key Concepts:
+- Cops: Individual rules that check code style and best practices
+- Auto-correct: Automatically fixes many offenses
+- Configuration: Controlled via .rubocop.yml
+
+Basic Commands:
+  rubocop          # Analyze code
+  rubocop -A       # Auto-correct all safe issues
+  rubocop -a       # Auto-correct safe issues only
+
+Example .rubocop.yml:
+  AllCops:
+    NewCops: enable
+    TargetRubyVersion: 3.2
+
+Benefits:
+- Improves code quality
+- Enforces team-wide standards
+- Reduces code review time
+- Encourages Ruby best practices
+=end

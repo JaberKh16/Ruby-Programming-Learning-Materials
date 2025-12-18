@@ -1,0 +1,127 @@
+Ruby Project Layouts Concepts Materials
+=======================================
+
+a. 📁 Project Structure for a Raw Ruby Application
+
+A well-organized project structure makes Ruby applications easier to read, maintain, test, and scale. 
+Even in raw Ruby, following a consistent structure is considered best practice.
+
+📁 Structure
+my_ruby_project/
+│
+├── bin/
+│   └── main.rb
+│
+├── lib/
+│   ├── my_ruby_project.rb
+│   ├── services/
+│   │   └── example_service.rb
+│   ├── models/
+│   │   └── example_model.rb
+│   └── utils/
+│       └── helper.rb
+│
+├── spec/                # or test/
+│   └── example_spec.rb
+│
+├── config/
+│   └── environment.rb
+│
+├── data/
+│   └── sample.json
+│
+├── Gemfile
+├── Gemfile.lock
+├── README.md
+└── .gitignore
+
+
+📌 Folder & File Responsibilities
+🔹 bin/
+Entry point of the application
+Example:
+# bin/main.rb
+require_relative '../lib/my_ruby_project'
+MyRubyProject.run
+
+
+
+b. ✅ Minimal Example (Very Simple)
+
+📁 Structure
+calculator/
+├── lib/
+│   └── calculator.rb
+└── bin/
+    └── run.rb
+
+
+c. CLI-Based Ruby Project Structure
+
+Used for command-line tools (my_tool run, my_tool generate, etc.)
+
+📁 Structure
+my_cli_app/
+│
+├── bin/
+│   └── my_cli_app
+│
+├── lib/
+│   ├── my_cli_app.rb
+│   ├── commands/
+│   │   └── greet.rb
+│   └── version.rb
+│
+├── Gemfile
+└── README.md
+
+Example:
+#!/usr/bin/env ruby
+require_relative '../lib/my_cli_app'
+MyCliApp.start(ARGV)
+
+
+d. Gem-Style Ruby Project Layout
+
+Used when building a reusable Ruby library (gem).
+
+📁 Structure
+my_gem/
+│
+├── lib/
+│   ├── my_gem.rb
+│   └── my_gem/
+│       ├── calculator.rb
+│       └── version.rb
+│
+├── exe/
+│   └── my_gem
+│
+├── spec/
+│   └── calculator_spec.rb
+│
+├── my_gem.gemspec
+├── Gemfile
+└── README.md
+
+
+e. MVC Pattern in Raw Ruby (No Rails)
+
+Perfect for learning MVC or building small apps without Rails.
+
+📁 Structure
+mvc_app/
+│
+├── controllers/
+│   └── users_controller.rb
+│
+├── models/
+│   └── user.rb
+│
+├── views/
+│   └── users_view.rb
+│
+├── config/
+│   └── router.rb
+│
+└── main.rb
