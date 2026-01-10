@@ -1,6 +1,6 @@
 # random signature generator
-adjectives = %w[quick lazy sleepy noisy hungry]
-nouns = %w[fox dog head leg tail cat]
+adjectives = %w[quick lazy sleepy noisy hungry]  # way to write array of strings
+nouns = %w[fox dog head leg tail cat] # way to write array of strings
 verbs = %w[jumps lifts bites licks pats]
 adverbs = %w[easily lazily noisily excitedly]
 
